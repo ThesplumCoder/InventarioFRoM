@@ -29,5 +29,19 @@ public class Perecedero extends Producto
     public void setFecha(Fecha fecha){
         fechaVencimiento = fecha;
     }
+    
+    /**
+     * 
+     */
+    public Fecha getFechaVencimiento(){
+       return this.fechaVencimiento;
+    }
+    
+    /**
+     * Sobreescritura del metodo toString().
+     */
+    public String toString(){
+       return super.toString() + "\n" + "En vitrina - Vence antes de: " + this.fechaVencimiento; 
+    }
 
 }

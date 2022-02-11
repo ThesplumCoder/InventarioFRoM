@@ -30,4 +30,11 @@ public class NoPerecedero extends Producto
     public void setPosicion(String posicion){
         posicionEnBodega = posicion;
     }
+    
+    /**
+     * Sobreescritura del metodo toString.
+     */
+    public String toString(){
+        return super.toString() + "\n" + "Bodega: " + this.posicionEnBodega;
+    }
 }

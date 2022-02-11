@@ -39,8 +39,8 @@ public class Demo
         
         // Asigna fecha de vencimiento a perecederos
         ((Perecedero)gestor.buscaProducto(80)).setFecha(new Fecha(2022,6,15));
-        ((Perecedero)gestor.buscaProducto(32)).setFecha(new Fecha(2022,2,16));
-        ((Perecedero)gestor.buscaProducto(33)).setFecha(new Fecha(2022,2,16));
+        ((Perecedero)gestor.buscaProducto(32)).setFecha(new Fecha(2022,3,21));
+        ((Perecedero)gestor.buscaProducto(33)).setFecha(new Fecha(2022,3,21));
 
         System.out.println( "***** Pruebas positivas agregaProducto() pasadas *****" );
         System.out.println();
@@ -85,5 +85,9 @@ public class Demo
         ArrayList<Producto> similares = gestor.buscaSimilares( "Guitar" );
         for( Producto producto : similares )
             System.out.println( producto );
-        }
+    }
+        
+    public static void main(){
+        Demo arranque = new Demo();
+    }
 }

@@ -3,4 +3,6 @@ comment0.target=Demo
 comment0.text=\r\n\ Demostraci\u00F3n\ de\ las\ clases\ GestorDeInventario\ y\ Producto.\r\n\u00A0*\ La\ demostraci\u00F3n\ se\ hace\ adecuadamente\ funcional\ al\r\n\u00A0*\ implementar\ herencia\ de\ clases.\r\n\ \r\n\ @author\ \ FRoM,\ ThesplumCoder\r\n\ @version\ 2022\r\n
 comment1.params=
 comment1.target=Demo()
-numComments=2
+comment2.params=
+comment2.target=void\ main()
+numComments=3

@@ -172,6 +172,7 @@ public class GestorDeInventario
                     for(int i = 1 ; i <= cantidad ; i++ ){
                         producto.vendeUno();
                     }
+                    return "Se vendio: " + producto.toString();
                 }
                 else{
                     return "No hay para la venta: " + producto.getNombre();

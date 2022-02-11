@@ -57,11 +57,11 @@ En vitrina - Vence antes de: MONDAY, 21 MARCH 2022
 Producto no esta en inventario
 Cantidad debe ser > 0
 ***** Pruebas negativas recibeProducto() pasadas *****
-No hay para la venta: Guitarra Taylor
-
-Se vendio: 79: Ibanez JS-1200 Guitar - Disponibles: 2
-Bodega: p5b3e7
-***** Pruebas positivas vendeProductos() pasadas *****
+    No hay para la venta: Guitarra Taylor
+    
+    Se vendio: 79: Ibanez JS-1200 Guitar - Disponibles: 2
+    Bodega: p5b3e7
+    ***** Pruebas positivas vendeProductos() pasadas *****
 
 Cantidad a vender no valida
 
