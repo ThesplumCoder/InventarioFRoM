@@ -1,33 +1,33 @@
-
 /**
- * Write a description of class NoPerecedero here.
+ * Modela un producto no perecedero.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author ThesplumCoder
+ * @version 2022
  */
-public class NoPerecedero
+public class NoPerecedero extends Producto
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Nos guarda una cadena que nos describe la posicion de este producto en la bodega.
+    private String posicionEnBodega;
 
     /**
-     * Constructor for objects of class NoPerecedero
-     */
-    public NoPerecedero()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Constructor de la clase. Nos da un producto no perecedero con los valores
+     * que le pasemos como argumentos.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param id identificador del producto no perecedero.
+     * @param nombre cadena con el nombre.
      */
-    public int sampleMethod(int y)
+    public NoPerecedero(int id, String nombre)
     {
-        // put your code here
-        return x + y;
+        super(id, nombre);
+        posicionEnBodega = "";
+    }
+    
+    /**
+     * Cambia la posicion del producto en bodega.
+     * 
+     * @param posicion cadena con la nueva posicion en bodega.
+     */
+    public void setPosicion(String posicion){
+        posicionEnBodega = posicion;
     }
 }

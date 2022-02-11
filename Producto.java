@@ -34,12 +34,17 @@ public abstract class Producto
         }
     }
     
+    /**
+     * Retorna el precio del producto.
+     * @return precioVenta.
+     */
     public double getPrecio(){
         return precioVenta;
     }
 
     /**
-     * @return  El id del producto.
+     * Retorna el id del producto.
+     * @return id.
      */
     public int getID()
     {
@@ -47,7 +52,8 @@ public abstract class Producto
     }
 
     /**
-     * @return El nombre del producto.
+     * Retorna el nombre del producto.
+     * @return nombre.
      */
     public String getNombre()
     {
@@ -55,7 +61,8 @@ public abstract class Producto
     }
 
     /**
-     * @return  La cantidad en inventario.
+     * Retorna la cantidad del producto. 
+     * @return cantidad.
      */
     public int getCantidad()
     {

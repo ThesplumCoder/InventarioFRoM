@@ -11,6 +11,10 @@ public class GestorDeInventario
 {
     private ArrayList<Producto> inventario;
 
+    /**
+     * Da un GestorDeInventario con una coleccion vacia llamada 'inventario'.
+     * Esa coleccion almacena objetos que heredan de Producto.
+     */
     public GestorDeInventario()
     {
         inventario = new ArrayList<>();
@@ -27,11 +31,13 @@ public class GestorDeInventario
         if( producto == null )
             str = "No hay producto a agregar.";
         else{
+            // Para que se cumpla debe ser valido y no debe existir en el inventario.
             if( esValido( producto.getNombre() ) && !yaExiste( producto.getNombre() ) )
             {
                 inventario.add ( producto );
                 str = producto.getNombre() + " agregado";
             }
+            // Alguna de las dos condiciones no se cumple, no sabemos cual.
             else
                 str = producto + " ya existe en el inventario";
         }

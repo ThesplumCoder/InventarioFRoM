@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * La demostración se hace adecuadamente funcional al
  * implementar herencia de clases.
  * 
- * @author  FRoM
+ * @author  FRoM, ThesplumCoder
  * @version 2022
  */
 public class Demo
@@ -14,26 +14,30 @@ public class Demo
         GestorDeInventario gestor = new GestorDeInventario();
 
         System.out.println( "***** APLICACION DE INVENTARIO *****" );
-        //Productos NO perecederos
+        // Productos NO perecederos
         System.out.println( gestor.agregaProducto( new NoPerecedero( 13, "Guitarra Taylor" ) ) );
         System.out.println( gestor.agregaProducto( new NoPerecedero( 46, "Les-Paul Gibson Guitar" ) ) );
         System.out.println( gestor.agregaProducto( new NoPerecedero( 79, "Ibanez JS-1200 Guitar" ) ) );
-        //Productos perecederos
+        
+        // Productos perecederos
         System.out.println( gestor.agregaProducto( new Perecedero( 80, "Limpia Cuerdas" ) ) );
         System.out.println( gestor.agregaProducto( new Perecedero( 32, "GuitarPlayer-Yogurt" ) ) );
         System.out.println( gestor.agregaProducto( new Perecedero( 33, "Musician-Kumis" ) ) );
-        // asigna precios a productos
+        
+        // Asigna precios a productos
         gestor.buscaProducto(13).setPrecio(700);
         gestor.buscaProducto(46).setPrecio(3000);
         gestor.buscaProducto(79).setPrecio(2000);
         gestor.buscaProducto(80).setPrecio(5);
         gestor.buscaProducto(32).setPrecio(2);
         gestor.buscaProducto(33).setPrecio(3);
-        // asigna posicion en bodega a NO perecederos
+        
+        // Asigna posicion en bodega a NO perecederos
         ((NoPerecedero) gestor.buscaProducto(13)).setPosicion("p1b1e3");
         ((NoPerecedero) gestor.buscaProducto(46)).setPosicion("p3b4e1");
         ((NoPerecedero) gestor.buscaProducto(79)).setPosicion("p5b3e7");
-        // asigna fecha de vencimiento a perecederos
+        
+        // Asigna fecha de vencimiento a perecederos
         ((Perecedero)gestor.buscaProducto(80)).setFecha(new Fecha(2022,6,15));
         ((Perecedero)gestor.buscaProducto(32)).setFecha(new Fecha(2022,2,16));
         ((Perecedero)gestor.buscaProducto(33)).setFecha(new Fecha(2022,2,16));
@@ -67,8 +71,9 @@ public class Demo
         System.out.println();
 
         ArrayList<Producto> renovables = gestor.productosConPocosItems( 5 );
-        for( Producto producto : renovables )
+        for( Producto producto : renovables ){
             System.out.println( producto );
+        }
         System.out.println( "***** Pruebas positivas pocos items pasada *****" );
         System.out.println();        
 

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Perecedero
+comment0.text=\r\n\ Modela\ un\ producto\ perecedero.\r\n\ \r\n\ @author\ ThesplumCoder\ \r\n\ @version\ 2022\r\n
+comment1.params=id\ nombre
+comment1.target=Perecedero(int,\ java.lang.String)
+comment1.text=\r\n\ Nos\ da\ un\ objeto\ con\ los\ argumentos\ que\ le\ pasemos\ y\ le\ pone\ como\r\n\ fecha\ de\ vencimiento\ un\ valor\ nulo.\r\n\ \r\n\ @param\ id\ identificador\ del\ producto\ perecedero.\r\n\ @param\ nombre\ cadena\ con\ el\ nombre.\r\n
+comment2.params=fecha
+comment2.target=void\ setFecha(Fecha)
+comment2.text=\r\n\ Nos\ configura\ la\ fecha\ de\ vencimiento\ con\ el\ objeto\ Fecha\ que\ le\ pasemos.\r\n\ \r\n\ @param\ fecha\ objeto\ con\ una\ fecha\ personalizable.\r\n
+numComments=3

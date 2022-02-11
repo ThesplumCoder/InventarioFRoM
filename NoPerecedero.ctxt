@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=NoPerecedero
+comment0.text=\r\n\ Modela\ un\ producto\ no\ perecedero.\r\n\ \r\n\ @author\ ThesplumCoder\r\n\ @version\ 2022\r\n
+comment1.params=id\ nombre
+comment1.target=NoPerecedero(int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ de\ la\ clase.\ Nos\ da\ un\ producto\ no\ perecedero\ con\ los\ valores\r\n\ que\ le\ pasemos\ como\ argumentos.\r\n\ \r\n\ @param\ id\ identificador\ del\ producto\ no\ perecedero.\r\n\ @param\ nombre\ cadena\ con\ el\ nombre.\r\n
+comment2.params=posicion
+comment2.target=void\ setPosicion(java.lang.String)
+comment2.text=\r\n\ Cambia\ la\ posicion\ del\ producto\ en\ bodega.\r\n\ \r\n\ @param\ posicion\ cadena\ con\ la\ nueva\ posicion\ en\ bodega.\r\n
+numComments=3

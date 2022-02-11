@@ -1,33 +1,33 @@
-
 /**
- * Write a description of class Perecedero here.
+ * Modela un producto perecedero.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author ThesplumCoder 
+ * @version 2022
  */
-public class Perecedero
+public class Perecedero extends Producto
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Fecha fechaVencimiento;
 
     /**
-     * Constructor for objects of class Perecedero
-     */
-    public Perecedero()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Nos da un objeto con los argumentos que le pasemos y le pone como
+     * fecha de vencimiento un valor nulo.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param id identificador del producto perecedero.
+     * @param nombre cadena con el nombre.
      */
-    public int sampleMethod(int y)
+    public Perecedero(int id, String nombre)
     {
-        // put your code here
-        return x + y;
+        super(id, nombre);
+        fechaVencimiento = null;
     }
+    
+    /**
+     * Nos configura la fecha de vencimiento con el objeto Fecha que le pasemos.
+     * 
+     * @param fecha objeto con una fecha personalizable.
+     */
+    public void setFecha(Fecha fecha){
+        fechaVencimiento = fecha;
+    }
+
 }
