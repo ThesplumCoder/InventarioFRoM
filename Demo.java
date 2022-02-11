@@ -51,13 +51,17 @@ public class Demo
         System.out.println( gestor.recibeProducto( 80, 24 ) );
         System.out.println( gestor.recibeProducto( 32, 12 ) );
         System.out.println( gestor.recibeProducto( 33, 12 ) );
-        System.out.println( "***** Pruebas positivas recibeProducto() pasadas *****" );                
+        System.out.println( "***** Pruebas positivas recibeProducto() pasadas *****" );
+        
+        // Empieza prueba negativa recibeProducto() 
         System.out.println( "------- Productos en Inventario -------" );
         System.out.println( gestor.muestraDetallesProductos() );
 
         System.out.println( gestor.recibeProducto( 12, 3 ) );
         System.out.println( gestor.recibeProducto( 46, -5 ) );        
         System.out.println( "***** Pruebas negativas recibeProducto() pasadas *****" );
+        
+        // Empieza prueba positiva vendeProducto()
         System.out.println( gestor.vendeProducto( 13, 3 ) );
         System.out.println( gestor.vendeProducto( 79, 1 ) );
         System.out.println( "***** Pruebas positivas vendeProductos() pasadas *****" );      

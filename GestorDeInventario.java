@@ -127,7 +127,28 @@ public class GestorDeInventario
      */
     public String recibeProducto( int id, int cantidad )
     {
-        // escriba aqui su codigo
+        /* Validamos que la cantidad tenga un valor logico, no hay
+         * cantidades negativas de un producto. Por otra parte
+         * tambien se quita el hecho de que si vas a poner cero en
+         * cantidad entonces pase de largo, no hay que procesar nada.
+        */
+        if(cantidad > 0){
+            Producto producto = buscaProducto( id );
+            if(producto != null){
+                /* El metodo que invocamos abajo ya nos valida que la
+                 * cantidad sea mayor que cero.
+                */
+                producto.aumentaCantidad( cantidad );
+                String res = "" + cantidad + " recibidos de " + producto.getNombre();
+                return res;
+            }
+            else{
+                return "Producto no esta en inventario";
+            }
+        }
+        else{
+            return "Cantidad debe ser > 0";
+        }
     }
 
     /**
@@ -138,7 +159,30 @@ public class GestorDeInventario
      */
     public String vendeProducto( int id, int cantidad )
     {        
-        // escriba aqui su codigo
+        if(cantidad > 0){
+            Producto producto = buscaProducto( id );
+            if(producto != null){
+                // Guardamos la cantidad que tenemos de ese producto.
+                int stock = producto.getCantidad();
+                
+                /* Validamos que el stock no sea cero ni que sea menos de lo
+                 * que necesitamos vender.
+                 */
+                if(stock != 0 && stock >= cantidad){
+                    for(int i = 1 ; i <= cantidad ; i++ ){
+                        producto.vendeUno();
+                    }
+                }
+                else{
+                    return "No hay para la venta: " + producto.getNombre();
+                }
+            }
+            else{
+                return "Producto no esta en inventario"; 
+            }
+        }
+        
+        return "Cantidad a vender no valida";
     }
 
     /**
@@ -149,7 +193,18 @@ public class GestorDeInventario
      */
     public ArrayList<Producto> productosConPocosItems( int minimo )
     {
-        // escriba aqui su codigo
+        /* Construimos una lista con la cual podemos responder cuando invoquen
+         * este metodo.
+         */
+        ArrayList<Producto> respuesta = new ArrayList<>();
+        
+        // Iteramos en todo el inventario, producto por producto.
+        for(Producto i : inventario){
+            if(i.getCantidad() <= minimo){
+                respuesta.add(i);
+            }
+        }
+        return respuesta;
     }   
 
     /** 
@@ -159,6 +214,27 @@ public class GestorDeInventario
      */
     public ArrayList<Producto> buscaSimilares( String busqueda )
     {
-        // escriba aqui su codigo
+        /* Construimos una lista con la cual podemos responder cuando invoquen
+         * este metodo.
+         */
+        ArrayList<Producto> respuesta = new ArrayList<>();
+        
+        if(busqueda != ""){
+            for(Producto i : inventario){
+                /* Aqui creamos una variable con el nombre del producto que vamos
+                 * iterando, entramos al condicional, utilizamos el metodo 'contains'
+                 * para validar si contiene la palabra y lo ponemos en caso de que
+                 * si sea.
+                 * 
+                 * Una aclaracion es que constains recibe una interface, pero como
+                 * la clase String la implementa entonces podemos utilizar este tipo.
+                 */
+                String nombre = i.getNombre();
+                if(nombre.contains(busqueda)){
+                    respuesta.add(i);
+                }
+            }
+        }
+        return respuesta;
     }
 }
